@@ -44,6 +44,6 @@ export function pokemonList(detailedPokemons) {
         name: p.name,
         weight: p.weight,
         height: p.height,
-        types: p.types.map(t => t.type.name),
+        types: p.types.map(t => " " + t.type.name),
     }))
 };

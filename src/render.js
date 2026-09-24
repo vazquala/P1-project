@@ -11,7 +11,7 @@ export function renderEmpty(el) {
 
 // PART 3: Loading.
 export function renderLoading(el) {
-    el.innerHTML = `<p>Loading your Pokémon list... Please wait.</p>`;
+    el.innerHTML = `<p>Loading your Pokémon list...</p>`;
 }
 
 // PART 2: renderList, shapes the JSON File.
@@ -20,11 +20,11 @@ export function renderList(el, items) {
     if (items.length === 0) return renderEmpty(el);
     el.innerHTML = `<ul>` + items.map((q) => `
     <li>
-        <p>${q.id}</p>
         <p>${q.name}</p>
-        <p>${q.weight}</p>
-        <p>${q.height}</p>
-        <p>${q.types}</p>
+        <p>id: ${q.id}</p>
+        <p>weight: ${q.weight}</p>
+        <p>height: ${q.height}</p>
+        <p>types: ${q.types}</p>
     </li>`
     ).join('') + `</ul>`
 };
